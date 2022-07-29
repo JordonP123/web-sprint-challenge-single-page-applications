@@ -1,0 +1,114 @@
+*{
+    font-size: 62.5%
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 3%;
+    box-shadow: 0 0 10px;
+}
+
+.sizeText{
+    padding: 3%;
+    font-size: 2.5rem;
+    background-color: rgba(74, 78, 78, 0.2);
+    box-shadow: 0 0 5px;
+}
+
+#size-dropdown{
+    width: 20%;
+    height: 5vh;
+    font-size: 1.5rem;
+    margin: 1%;
+    margin-bottom: 4%;
+}
+
+.dropdown{
+   font-size: 1rem;
+}
+
+.cboxContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.cbox{
+    margin: 1.5%;
+    margin-left: 3%;
+    font-size: 1.5rem;
+}
+
+.cboxTitle{
+    font-size: 2.5rem;
+    padding: 3%;
+    background-color: rgba(74, 78, 78, 0.2);
+    box-shadow: 0 0 5px;
+}
+
+.name{
+    background-color: rgba(74, 78, 78, 0.2);
+    box-shadow: 0 0 5px;
+    height: 3vh;
+    font-size: 1.5rem;
+    padding: 1%;
+}
+
+.error{
+    color: red;
+    height: 3vh;
+    font-size: 1.5rem;
+}
+
+
+#name-input{
+    margin: 1%;
+    width: 20%;
+    height: 3vh;
+    font-size: 1.3rem;
+}
+
+.specialInstructions{
+    font-size: 2rem;
+    padding: 3%;
+    background-color: rgba(74, 78, 78, 0.2);
+    box-shadow: 0 0 5px;
+}
+
+#special-text{
+    width: 80%;
+    margin: 2%;
+    height: 3vh;
+    margin-left: 10%;
+    font-size: 1rem
+}
+
+#order-button{
+    margin: 2%;
+    height: 4vh;
+    font-size: 1.5rem;
+}
+
+.header{
+    height: 7vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px;
+    margin-top: 1%
+}
+
+.homeImg{
+width: 80%;
+margin: 4%;
+margin-left: 10%;
+}
+
+
+
+

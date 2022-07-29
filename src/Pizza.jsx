@@ -21,30 +21,34 @@ const PizzaBuilder = (props) =>{
 
     return(
         <>
-        <Link to='/'>Home</Link>
-        <h1>Menu</h1>
-        
+
         <form onSubmit={onSubmit} id='pizza-form'>
-            {errors.name}
-            <label> Name
+        <div className='formContainer'>
+            
+            <label><div className='name'>Enter your name: </div>
             <input id='name-input'
             type='text'
             name='name'
+            placeholder='Name'
             onChange={onChange}
             value={formValues.name}
             />
+            <div className="error">{errors.name}</div>
             </label>
 
-            <label> Pick a size, any size
+            <label className='size'> <div className='sizeText'>Pick a size, any size</div>
             <select size={formValues.size} onChange={onChange} name='size' id='size-dropdown'>
-                <option>--Pick a size--</option>
-                <option value='small'>Small 12"</option>
-                <option>Medium 14"</option>
-                <option>Large 16"</option>
+                <option className='dropdown'>--Pick a size--</option>
+                <option className='dropdown' value='small'>Small 12"</option>
+                <option className='dropdown'>Medium 14"</option>
+                <option className='dropdown'>Large 16"</option>
             </select>
             </label>
 
-            <label>Cheese
+            <div className='cboxTitle'>Select your toppings</div>
+            <div className='cboxContainer'>
+                
+            <label className='cbox cbox1'>Cheese
                 <input
                 type='checkbox'
                 name='toppingOne'
@@ -53,7 +57,7 @@ const PizzaBuilder = (props) =>{
                
                 />
             </label>
-            <label>Extra Cheese
+            <label className='cbox cbox2'>Extra Cheese
                 <input
                 type='checkbox'
                 name='toppingTwo'
@@ -61,7 +65,7 @@ const PizzaBuilder = (props) =>{
                 value={formValues.toppingTwo}
                 />
             </label>
-            <label>Extra Extra Cheese
+            <label className='cbox cbox3'>Extra Extra Cheese
                 <input
                 type='checkbox'
                 name='toppingThree'
@@ -69,7 +73,7 @@ const PizzaBuilder = (props) =>{
                 value={formValues.toppingThree}
                 />
             </label>
-            <label>No Cheese
+            <label className='cbox cbox4'>No Cheese
                 <input
                 type='checkbox'
                 name='toppingFour'
@@ -77,19 +81,23 @@ const PizzaBuilder = (props) =>{
                 value={formValues.toppingFour}
                 />
             </label>
+            </div>
 
-            <label>Special Instructions, that we wont read
+            <label><div className='specialInstructions'>Special Instructions, that we wont read</div>
             <input id='special-text'
             type ='text'
             name='specialInstructions'
+            placeholder='Anything else you want to attempt to add mwuahahahah'
             onChange={onChange}
             value={formValues.specialInstructions}
             />
             </label>
             
-            <button id='order-button'>Order</button>
-        </form>
+            <button className='formButton' id='order-button'>Submit your order</button>
+            </div>
 
+        </form>
+       
         {/* {
       newOrder.map(order=>(
         <>

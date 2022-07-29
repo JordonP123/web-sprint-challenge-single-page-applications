@@ -4,6 +4,10 @@ import PizzaBuilder from './Pizza'
 import axios from 'axios'
 import schema from './schema'
 import * as yup from 'yup'
+import './reset.css';
+import './App.css'
+import MyImg from './Pizza.jpg'
+
 
 const initialData = {
   name: '',
@@ -65,9 +69,16 @@ const App = () => {
 
   return (
     <>
-    <header>
+    <header className="header">
       <h1>Lambda Eats</h1>
+      <Route exact path='/'>
       <Link id='order-pizza'to='/pizza'>Order Now</Link>
+      </Route>
+      <Route path='/pizza'>
+      <Link to='/'>Home</Link>
+      </Route>
+      </header>
+
       <Route path ='/pizza'>
       <PizzaBuilder 
         formValues={formValues}
@@ -77,8 +88,6 @@ const App = () => {
         errors={errors}
         />
         </Route>
-      
-    </header>
     
     </>
   );
