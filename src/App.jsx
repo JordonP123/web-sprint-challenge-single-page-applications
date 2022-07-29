@@ -49,7 +49,6 @@ const App = () => {
     axios.post('https://reqres.in/api/orders', formValues)
     .then(res =>{
        setNewOrder([res.data, ...newOrder])
-       setFormValues(initialData)
     })}
 
     const submit = () =>{
@@ -63,6 +62,7 @@ const App = () => {
           specialInstructions: formValues.specialInstructions
       }
       addPizzaToApi(newData)
+      setFormValues(initialData)
    }
 
   

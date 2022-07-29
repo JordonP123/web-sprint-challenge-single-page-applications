@@ -9,7 +9,7 @@ const PizzaBuilder = (props) =>{
 
  const onChange = e => {
     const { name, value, checked, type} = e.target
-    const valueToUse = type === 'checkbox' ? checked : value
+    const valueToUse =  type === 'checkbox' ? checked : value;
     change(name, valueToUse)
  }
 
@@ -37,11 +37,11 @@ const PizzaBuilder = (props) =>{
             </label>
 
             <label className='size'> <div className='sizeText'>Pick a size, any size</div>
-            <select size={formValues.size} onChange={onChange} name='size' id='size-dropdown'>
-                <option className='dropdown'>--Pick a size--</option>
-                <option className='dropdown' value='small'>Small 12"</option>
-                <option className='dropdown'>Medium 14"</option>
-                <option className='dropdown'>Large 16"</option>
+            <select value={formValues.size} onChange={onChange} name='size' id='size-dropdown'>
+                <option className='dropdown' value=''>--Pick a size--</option>
+                <option className='dropdown' value='Small 12 inch'>Small 12"</option>
+                <option className='dropdown' value='Medium 14 inch'>Medium 14"</option>
+                <option className='dropdown' value ='Large 16 inch'>Large 16"</option>
             </select>
             </label>
 
@@ -52,7 +52,7 @@ const PizzaBuilder = (props) =>{
                 <input
                 type='checkbox'
                 name='toppingOne'
-                value={formValues.toppingOne}
+                checked={formValues.toppingOne}
                 onChange={onChange}
                
                 />
@@ -62,7 +62,7 @@ const PizzaBuilder = (props) =>{
                 type='checkbox'
                 name='toppingTwo'
                 onChange={onChange}
-                value={formValues.toppingTwo}
+                checked={formValues.toppingTwo}
                 />
             </label>
             <label className='cbox cbox3'>Extra Extra Cheese
@@ -70,7 +70,7 @@ const PizzaBuilder = (props) =>{
                 type='checkbox'
                 name='toppingThree'
                 onChange={onChange}
-                value={formValues.toppingThree}
+                checked={formValues.toppingThree}
                 />
             </label>
             <label className='cbox cbox4'>No Cheese
@@ -78,7 +78,7 @@ const PizzaBuilder = (props) =>{
                 type='checkbox'
                 name='toppingFour'
                 onChange={onChange}
-                value={formValues.toppingFour}
+                checked={formValues.toppingFour}
                 />
             </label>
             </div>
