@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const PizzaBuilder = (props) =>{
-    const {submit, formValues, change, newOrder,errors} = props
+    const {submit, formValues, change, disabled ,errors} = props
 
 
  const onChange = e => {
@@ -93,7 +93,7 @@ const PizzaBuilder = (props) =>{
             />
             </label>
             
-            <button className='formButton' id='order-button'>Submit your order</button>
+            <button disabled={disabled} className='formButton' id='order-button'>Submit your order</button>
             </div>
 
         </form>
